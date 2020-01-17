@@ -50,7 +50,7 @@ shade==1.20.0
 slackclient==1.0.6
 tacacs_plus==1.0
 twilio==6.1.0
-twisted==16.6.0
+twisted==19.7.0
 uWSGI==2.0.14
 xmltodict==0.11.0
 pip==9.0.1
