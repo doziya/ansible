@@ -15,7 +15,7 @@ asn1crypto==0.22.0        # via cryptography
 attrs==17.2.0             # via service-identity
 autobahn==17.6.1          # via daphne
 azure-batch==1.0.0        # via azure
-azure-common[autorest]==1.1.4  # via azure-batch, azure-mgmt-batch, azure-mgmt-compute, azure-mgmt-keyvault, azure-mgmt-logic, azure-mgmt-network, azure-mgmt-redis, azure-mgmt-resource, azure-mgmt-scheduler, azure-mgmt-storage, azure-servicebus, azure-servicemanagement-legacy, azure-storage
+azure-common==1.1.4       # via azure-batch, azure-mgmt-batch, azure-mgmt-compute, azure-mgmt-keyvault, azure-mgmt-logic, azure-mgmt-network, azure-mgmt-redis, azure-mgmt-resource, azure-mgmt-scheduler, azure-mgmt-storage, azure-servicebus, azure-servicemanagement-legacy, azure-storage
 azure-mgmt-batch==1.0.0   # via azure-mgmt
 azure-mgmt-compute==0.30.0rc6  # via azure-mgmt
 azure-mgmt-keyvault==0.30.0rc6  # via azure-mgmt
@@ -41,7 +41,7 @@ boto3==1.4.4
 boto==2.46.1
 botocore==1.5.72          # via boto3, s3transfer
 celery==3.1.17
-#certifi==2017.4.17        # via msrest
+certifi==2019.11.28       # via msrest
 cffi==1.10.0              # via cryptography
 channels==0.17.3
 cliff==2.7.0              # via osc-lib, python-designateclient, python-neutronclient, python-openstackclient
@@ -58,17 +58,18 @@ django-celery==3.1.17
 django-crum==0.7.1
 django-extensions==1.7.8
 django-jsonfield==1.0.1
-django-polymorphic==1.2
 django-pglocks==1.0.2
+django-polymorphic==1.2
 django-radius==1.1.0
 django-solo==1.1.2
 django-split-settings==0.2.5
 django-taggit==0.22.1
 django-transaction-hooks==0.2
-django==1.8.16            # via channels, django-auth-ldap, django-crum, django-split-settings, django-transaction-hooks
+django==1.8.16
 djangorestframework-yaml==1.0.3
-djangorestframework==3.3.3
-#docutils==0.12            # via botocore
+djangorestframework==3.9.1
+dm.xmlsec.binding==1.3.2  # via python-saml
+docutils==0.16            # via botocore
 dogpile.cache==0.6.3      # via python-ironicclient, shade
 enum34==1.1.6             # via cryptography, msrest
 funcsigs==1.0.2           # via debtcollector, oslo.utils
@@ -99,7 +100,7 @@ jsonschema==2.6.0
 keyring==10.3.3           # via msrestazure
 keystoneauth1==2.21.0     # via openstacksdk, os-client-config, osc-lib, python-cinderclient, python-designateclient, python-glanceclient, python-ironicclient, python-keystoneclient, python-neutronclient, python-novaclient, python-openstackclient, shade
 kombu==3.0.35             # via asgi-amqp, celery
-lxml==3.8.0               # via pyvmomi
+lxml==3.8.0               # via dm.xmlsec.binding, pyvmomi
 m2crypto==0.25.1
 markdown==2.6.7
 monotonic==1.3            # via oslo.utils
@@ -119,14 +120,12 @@ oslo.config==4.6.0        # via python-keystoneclient
 oslo.i18n==3.15.3         # via osc-lib, oslo.config, oslo.utils, python-cinderclient, python-glanceclient, python-ironicclient, python-keystoneclient, python-neutronclient, python-novaclient, python-openstackclient
 oslo.serialization==2.18.0  # via python-ironicclient, python-keystoneclient, python-neutronclient, python-novaclient
 oslo.utils==3.26.0        # via osc-lib, oslo.serialization, python-cinderclient, python-designateclient, python-glanceclient, python-ironicclient, python-keystoneclient, python-neutronclient, python-novaclient, python-openstackclient
-packaging==16.8           # via setuptools
 pbr==3.1.1                # via cliff, debtcollector, keystoneauth1, openstacksdk, osc-lib, oslo.i18n, oslo.serialization, oslo.utils, positional, python-cinderclient, python-designateclient, python-glanceclient, python-ironicclient, python-keystoneclient, python-neutronclient, python-novaclient, python-openstackclient, requestsexceptions, shade, stevedore
 pexpect==4.2.1
 positional==1.1.1         # via keystoneauth1, python-keystoneclient
 prettytable==0.7.2        # via cliff, python-cinderclient, python-glanceclient, python-ironicclient, python-novaclient
 psphere==0.5.2
 psutil==5.2.2
-psycopg2==2.7.1
 ptyprocess==0.5.1         # via pexpect
 pyasn1-modules==0.0.9     # via service-identity
 pyasn1==0.2.3             # via pyasn1-modules, service-identity
@@ -134,7 +133,7 @@ pycparser==2.17           # via cffi
 pycrypto==2.6.1
 pygerduty==0.35.2
 pyjwt==1.5.0              # via adal, python-social-auth, twilio
-pyopenssl==17.0.0         # via pyvmomi, service-identity, twilio
+pyopenssl==17.0.0
 pyparsing==2.2.0
 pyrad==2.1                # via django-radius
 python-cinderclient==2.2.0  # via python-openstackclient, shade
@@ -168,7 +167,7 @@ secretstorage==2.3.1      # via keyring
 service-identity==16.0.0
 shade==1.20.0
 simplejson==3.11.1        # via osc-lib, python-cinderclient, python-neutronclient, python-novaclient
-six==1.10.0               # via asgi-amqp, asgiref, autobahn, cliff, cmd2, cryptography, debtcollector, django-extensions, irc, jaraco.classes, jaraco.collections, jaraco.itertools, jaraco.logging, jaraco.stream, keystoneauth1, more-itertools, munch, openstacksdk, osc-lib, oslo.config, oslo.i18n, oslo.serialization, oslo.utils, packaging, pygerduty, pyopenssl, pyrad, python-cinderclient, python-dateutil, python-designateclient, python-glanceclient, python-ironicclient, python-keystoneclient, python-memcached, python-neutronclient, python-novaclient, python-openstackclient, python-social-auth, pyvmomi, setuptools, shade, slackclient, stevedore, tacacs-plus, tempora, twilio, txaio, warlock, websocket-client
+six==1.10.0               # via asgi-amqp, asgiref, autobahn, cliff, cmd2, cryptography, debtcollector, django-extensions, irc, jaraco.classes, jaraco.collections, jaraco.itertools, jaraco.logging, jaraco.stream, keystoneauth1, more-itertools, munch, openstacksdk, osc-lib, oslo.config, oslo.i18n, oslo.serialization, oslo.utils, pygerduty, pyopenssl, pyrad, python-cinderclient, python-dateutil, python-designateclient, python-glanceclient, python-ironicclient, python-keystoneclient, python-memcached, python-neutronclient, python-novaclient, python-openstackclient, python-social-auth, pyvmomi, shade, slackclient, stevedore, tacacs-plus, tempora, twilio, txaio, warlock, websocket-client
 slackclient==1.0.6
 stevedore==1.23.0         # via cliff, keystoneauth1, openstacksdk, osc-lib, oslo.config, python-designateclient, python-keystoneclient
 suds==0.4                 # via psphere
